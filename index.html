@@ -43,6 +43,19 @@
             text-align: center;
             margin-top: 20px;
         }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #00ff00;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #00cc00;
+        }
     </style>
 </head>
 <body>
@@ -57,11 +70,20 @@
             <li class="blink">Linux Proficiency</li>
             <li>Ethical Hacking</li>
             <li class="blink">OSINT Techniques</li>
+            <li>Penetration Testing</li>
+            <li class="blink">Malware Analysis</li>
+            <li>Cryptography</li>
+            <li class="blink">Cloud Security</li>
+            <li>Docker Containerization</li>
         </ul>
         <h2>Current Learning:</h2>
         <p class="typing">Diving deep into TryHackMe and HackTheBox challenges...</p>
         <p>Stay tuned for updates on my cybersecurity adventures!</p>
         <div id="clock"></div>
+        <div>
+            <a href="#" class="button">Linux Cheatsheets</a>
+            <a href="#" class="button">My Docker Builds</a>
+        </div>
     </div>
     <script>
         function typeWriter(element, text, i = 0) {

@@ -3,16 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Interests</title>
+    <title>My Cybersecurity Journey</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #000;
+            color: #00ff00;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #00ff00;
+        }
+        #penguin {
+            width: 100px;
+            margin: 20px auto;
+            display: block;
+        }
+        @keyframes blink {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        .blink {
+            animation: blink 1s infinite;
+        }
+        .typing::after {
+            content: '|';
+            animation: blink 0.7s infinite;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Page</h1>
-    <h2>My Interests:</h2>
-    <ul>
-        <li>Cybersecurity</li>
-        <li>Web Development</li>
-        <li>Open Source Projects</li>
-        <li>Linux Systems</li>
-    </ul>
+    <div class="container">
+        <img id="penguin" src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Linux Penguin">
+        <h1 class="typing">Welcome to My Cybersecurity Journey</h1>
+        <p>Hey there! I'm a self-taught cybersecurity enthusiast exploring the digital realm.</p>
+        <h2>Skills & Interests:</h2>
+        <ul>
+            <li class="blink">Network Reconnaissance</li>
+            <li>Web Application Security</li>
+            <li class="blink">Linux Proficiency</li>
+            <li>Ethical Hacking</li>
+            <li class="blink">OSINT Techniques</li>
+        </ul>
+        <h2>Current Learning:</h2>
+        <p class="typing">Diving deep into TryHackMe and HackTheBox challenges...</p>
+        <p>Stay tuned for updates on my cybersecurity adventures!</p>
+    </div>
+    <script>
+        function typeWriter(element, text, i = 0) {
+            if (i < text.length) {
+                element.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(() => typeWriter(element, text, i), 50);
+            }
+        }
+        window.onload = function() {
+            const h1 = document.querySelector('h1');
+            h1.innerHTML = '';
+            typeWriter(h1, 'Welcome to My Cybersecurity Journey');
+        }
+    </script>
 </body>
 </html>

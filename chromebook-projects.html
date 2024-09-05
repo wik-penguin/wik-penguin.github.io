@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Chromebook Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .project {
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .project-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        .steps {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Chromebook Projects</h1>
+    <img src="chromebook-linux.jpg" alt="Chromebook with Linux Penguin" class="project-image">
+
+    <div class="project">
+        <h2>1. Installing LibreWolf on Chromebook</h2>
+        <img src="librewolf-logo.png" alt="LibreWolf Logo" class="project-image">
+        <div class="steps">
+            <h3>Steps:</h3>
+            <ol>
+                <li>Enable Linux (Crostini) on your Chromebook</li>
+                <li>Open Terminal and run: <code>sudo apt install flatpak -y</code></li>
+                <li>Add Flathub repository: <code>sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo</code></li>
+                <li>Install LibreWolf: <code>sudo flatpak install flathub io.gitlab.librewolf-community -y</code></li>
+                <li>Launch LibreWolf from your Linux apps menu</li>
+            </ol>
+        </div>
+        <a href="#" class="button">View Details</a>
+    </div>
+
+    <div class="project">
+        <h2>2. Setting Up Steam on Chromebook (No Root)</h2>
+        <img src="steam-logo.png" alt="Steam Logo" class="project-image">
+        <div class="steps">
+            <h3>Steps:</h3>
+            <ol>
+                <li>Enable Linux (Crostini) on your Chromebook</li>
+                <li>Open Terminal and run: <code>sudo apt update && sudo apt upgrade -y</code></li>
+                <li>Run: <code>sudo dpkg --add-architecture i386</code></li>
+                <li>Run: <code>sudo apt update</code></li>
+                <li>Run: <code>sudo apt upgrade</code></li>
+                <li>Run: <code>sudo apt-get install --reinstall libgl1-mesa-glx:i386</code></li>
+                <li>Download Steam .deb file from the official website</li>
+                <li>Install Steam using: <code>sudo dpkg -i steam_latest.deb</code></li>
+                <li>Launch Steam from your Linux apps menu</li>
+            </ol>
+        </div>
+        <a href="#" class="button">View Details</a>
+    </div>
+
+    <div class="project">
+        <h2>3. Installing Tor Browser on Chromebook</h2>
+        <img src="tor-logo.png" alt="Tor Logo" class="project-image">
+        <div class="steps">
+            <h3>Steps:</h3>
+            <ol>
+                <li>Enable Linux (Crostini) on your Chromebook</li>
+                <li>Open Terminal and run: <code>sudo apt install flatpak -y</code></li>
+                <li>Add Flathub repository: <code>flatpak --user remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo</code></li>
+                <li>Install Tor Browser: <code>flatpak install flathub com.github.micahflee.torbrowser-launcher</code></li>
+                <li>Launch Tor Browser Launcher from your Linux apps menu</li>
+                <li>Follow the prompts to download and install the actual Tor Browser</li>
+            </ol>
+        </div>
+        <a href="#" class="button">View Details</a>
+    </div>
+
+    <div class="project">
+        <h2>4. Setting Up Linux Desktop on Chromebook (No Root)</h2>
+        <img src="linux-desktop.png" alt="Linux Desktop" class="project-image">
+        <div class="steps">
+            <h3>Steps:</h3>
+            <ol>
+                <li>Enable Linux (Crostini) on your Chromebook</li>
+                <li>Open Terminal and run: <code>sudo apt update && sudo apt upgrade -y</code></li>
+                <li>Install Xfce desktop: <code>sudo apt install task-xfce-desktop -y</code></li>
+                <li>Install Xephyr: <code>sudo apt install xserver-xephyr -y</code></li>
+                <li>Create a script to launch the desktop: <code>sudo nano /usr/bin/gox</code></li>
+                <li>Add the following content to the script:
+                    <pre>
+Xephyr -br -fullscreen -resizeable :40 &
+sleep 5
+sudo -u $USER DISPLAY=:40 startxfce4 &
+                    </pre>
+                </li>
+                <li>Save the script and make it executable: <code>sudo chmod +x /usr/bin/gox</code></li>
+                <li>Run the desktop environment by typing 'gox' in the terminal</li>
+            </ol>
+        </div>
+        <a href="#" class="button">View Details</a>
+    </div>
+
+    <div class="project">
+        <h2>5. Installing Kali Linux on Chromebook (No Root)</h2>
+        <img src="kali-logo.png" alt="Kali Linux Logo" class="project-image">
+        <div class="steps">
+            <h3>Steps:</h3>
+            <ol>
+                <li>Enable Linux (Crostini) on your Chromebook</li>
+                <li>Open Terminal and run: <code>sudo apt install nano -y</code></li>
+                <li>Edit sources list: <code>sudo nano /etc/apt/sources.list</code></li>
+                <li>Add this line: <code>deb http://http.kali.org/kali kali-rolling main contrib non-free</code></li>
+                <li>Download Kali key: <code>sudo wget https://archive.kali.org/archive-key.asc -O /etc/apt/trusted.gpg.d/kali-archive-keyring.asc</code></li>
+                <li>Update system: <code>sudo apt update -y && sudo apt full-upgrade -y</code></li>
+                <li>Install Kali: <code>sudo apt install kali-linux-default -y</code></li>
+                <li>Set up Xephyr for GUI (follow steps from Linux Desktop setup)</li>
+            </ol>
+        </div>
+        <a href="#" class="button">View Details</a>
+    </div>
+</body>
+</html>

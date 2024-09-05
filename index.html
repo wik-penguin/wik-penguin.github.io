@@ -32,11 +32,16 @@
             100% { opacity: 0; }
         }
         .blink {
-            animation: blink 1s infinite;
+            animation: blink 3s infinite;
         }
         .typing::after {
             content: '|';
             animation: blink 0.7s infinite;
+        }
+        #clock {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -56,6 +61,7 @@
         <h2>Current Learning:</h2>
         <p class="typing">Diving deep into TryHackMe and HackTheBox challenges...</p>
         <p>Stay tuned for updates on my cybersecurity adventures!</p>
+        <div id="clock"></div>
     </div>
     <script>
         function typeWriter(element, text, i = 0) {
@@ -65,10 +71,16 @@
                 setTimeout(() => typeWriter(element, text, i), 50);
             }
         }
+        function updateClock() {
+            const now = new Date();
+            const time = now.toLocaleTimeString();
+            document.getElementById('clock').textContent = time;
+        }
         window.onload = function() {
             const h1 = document.querySelector('h1');
             h1.innerHTML = '';
             typeWriter(h1, 'Welcome to My Cybersecurity Journey');
+            setInterval(updateClock, 1000);
         }
     </script>
 </body>

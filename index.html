@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -6,104 +5,271 @@
 <title>My Cybersecurity Journey</title>
 <style>
 body {
-    font-family: 'Courier New', monospace;
-    line-height: 1.6;
-    margin: 0;
-    padding: 20px;
-    background-color: #000;
-    color: #00ff00;
+  font-family: 'Courier New', monospace;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  background-color: #000;
+  color: #00ff00;
 }
 .container {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
 }
 h1, h2 {
-    color: #00ff00;
+  color: #00ff00;
 }
 #penguin {
-    width: 100px;
-    margin: 20px auto;
-    display: block;
+  width: 100px;
+  margin: 20px auto;
+  display: block;
 }
 @keyframes blink {
-    0% { opacity: 0; }
-    50% { opacity: 1; }
-    100% { opacity: 0; }
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
 }
 .blink {
-    animation: blink 3s infinite;
+  animation: blink 3s infinite;
 }
 .typing::after {
-    content: '|';
-    animation: blink 0.7s infinite;
+  content: '|';
+  animation: blink 0.7s infinite;
 }
 #clock {
-    font-size: 24px;
-    text-align: center;
-    margin-top: 20px;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 20px;
 }
 .button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px;
-    background-color: #00ff00;
-    color: #000;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #00ff00;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 .button:hover {
-    background-color: #00cc00;
+  background-color: #00cc00;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+table, th, td {
+  border: 1px solid #00ff00;
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background-color: #00cc00;
+}
+tr:nth-child(even) {
+  background-color: #003300;
 }
 </style>
 </head>
 <body>
 <div class="container">
-    <img id="penguin" src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Linux Penguin">
-    <h1 class="typing">Welcome to My Cybersecurity Journey</h1>
-    <p>Hey there! I'm a self-taught cybersecurity enthusiast exploring the digital realm.</p>
-    <h2>Skills & Interests:</h2>
-    <ul>
-        <li class="blink">Network Reconnaissance</li>
-        <li>Web Application Security</li>
-        <li class="blink">Linux Proficiency</li>
-        <li>Ethical Hacking</li>
-        <li class="blink">OSINT Techniques</li>
-        <li>Penetration Testing</li>
-        <li class="blink">Malware Analysis</li>
-        <li>Cryptography</li>
-        <li class="blink">Cloud Security</li>
-        <li>Docker Containerization</li>
-    </ul>
-    <h2>Current Learning:</h2>
-    <p class="typing">Diving deep into TryHackMe and HackTheBox challenges...</p>
-    <p>Stay tuned for updates on my cybersecurity adventures!</p>
-    <div id="clock"></div>
-    <div>
-        <a href="#" class="button">Linux Cheatsheets</a>
-        <a href="#" class="button">My Docker Builds</a>
-        <a href="#" class="button">Blog</a>
-    </div>
+<img id="penguin" src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Linux Penguin">
+<h1 class="typing">Welcome to My Cybersecurity Journey</h1>
+<p>Hey there! I'm a self-taught cybersecurity enthusiast exploring the digital realm.</p>
+<h2>Skills & Interests:</h2>
+<ul>
+  <li class="blink">Network Reconnaissance</li>
+  <li>Web Application Security</li>
+  <li class="blink">Linux Proficiency</li>
+  <li>Ethical Hacking</li>
+  <li class="blink">OSINT Techniques</li>
+  <li>Penetration Testing</li>
+  <li class="blink">Malware Analysis</li>
+  <li>Cryptography</li>
+  <li class="blink">Cloud Security</li>
+  <li>Docker Containerization</li>
+</ul>
+<h2>Current Learning:</h2>
+<p class="typing">Diving deep into TryHackMe and HackTheBox challenges...</p>
+<p>Stay tuned for updates on my cybersecurity adventures!</p>
+
+<h2>Cybersecurity Skills</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Skill</th>
+      <th>Proficiency Level</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Network Security</td>
+      <td>Advanced</td>
+    </tr>
+    <tr>
+      <td>Penetration Testing</td>
+      <td>Advanced</td>
+    </tr>
+    <tr>
+      <td>Vulnerability Assessment</td>
+      <td>Advanced</td>
+    </tr>
+    <tr>
+      <td>OSINT</td>
+      <td>Intermediate</td>
+    </tr>
+    <tr>
+      <td>Ethical Hacking</td>
+      <td>Intermediate</td>
+    </tr>
+    <tr>
+      <td>Red Team Operations</td>
+      <td>Intermediate</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Tools and Technologies</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Tool/Technology</th>
+      <th>Proficiency Level</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nmap</td>
+      <td>Advanced</td>
+    </tr>
+    <tr>
+      <td>AutoRecon</td>
+      <td>Advanced</td>
+    </tr>
+    <tr>
+      <td>Metasploit</td>
+      <td>Intermediate</td>
+    </tr>
+    <tr>
+      <td>Wireshark</td>
+      <td>Intermediate</td>
+    </tr>
+    <tr>
+      <td>Burp Suite</td>
+      <td>Intermediate</td>
+    </tr>
+    <tr>
+      <td>Python (for security)</td>
+      <td>Intermediate</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Platforms and Environments</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Platform</th>
+      <th>Experience Level</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TryHackMe</td>
+      <td>Extensive</td>
+    </tr>
+    <tr>
+      <td>HackTheBox</td>
+      <td>Moderate</td>
+    </tr>
+    <tr>
+      <td>Kali Linux</td>
+      <td>Advanced</td>
+    </tr>
+    <tr>
+      <td>Docker (for security)</td>
+      <td>Intermediate</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Methodologies and Frameworks</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Methodology/Framework</th>
+      <th>Understanding Level</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>OSCP Methodology</td>
+      <td>Advanced</td>
+    </tr>
+    <tr>
+      <td>Cyber Kill Chain</td>
+      <td>Intermediate</td>
+    </tr>
+    <tr>
+      <td>MITRE ATT&CK</td>
+      <td>Intermediate</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Documentation and Reporting</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Skill</th>
+      <th>Proficiency Level</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Technical Writing</td>
+      <td>Advanced</td>
+    </tr>
+    <tr>
+      <td>Penetration Test Reporting</td>
+      <td>Intermediate</td>
+    </tr>
+    <tr>
+      <td>GitHub Documentation</td>
+      <td>Advanced</td>
+    </tr>
+  </tbody>
+</table>
+
+<div id="clock"></div>
+<div>
+  <a href="#" class="button">Linux Cheatsheets</a>
+  <a href="#" class="button">My Docker Builds</a>
+  <a href="#" class="button">Blog</a>
+</div>
 </div>
 <script>
 function typeWriter(element, text, i = 0) {
-    if (i < text.length) {
-        element.innerHTML += text.charAt(i);
-        i++;
-        setTimeout(() => typeWriter(element, text, i), 50);
-    }
+  if (i < text.length) {
+    element.innerHTML += text.charAt(i);
+    i++;
+    setTimeout(() => typeWriter(element, text, i), 50);
+  }
 }
 function updateClock() {
-    const now = new Date();
-    const time = now.toLocaleTimeString();
-    document.getElementById('clock').textContent = time;
+  const now = new Date();
+  const time = now.toLocaleTimeString();
+  document.getElementById('clock').textContent = time;
 }
 window.onload = function() {
-    const h1 = document.querySelector('h1');
-    h1.innerHTML = '';
-    typeWriter(h1, 'Welcome to My Cybersecurity Journey');
-    setInterval(updateClock, 1000);
+  const h1 = document.querySelector('h1');
+  h1.innerHTML = '';
+  typeWriter(h1, 'Welcome to My Cybersecurity Journey');
+  setInterval(updateClock, 1000);
 }
 </script>
 </body>
